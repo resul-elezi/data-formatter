@@ -21,6 +21,10 @@ dateOptionsSelectElement.addEventListener("change", () => {
             .reverse()
             .join("-");
           break;
-    
+        case "mm-dd-yyyy-h-mm":
+          currentDateParagraph.textContent = `${month}-${day}-${year} ${hours} Hours ${minutes} Minutes`;
+          break;
+        default:
+        currentDateParagraph.textContent = formattedDate;
       }
   });
